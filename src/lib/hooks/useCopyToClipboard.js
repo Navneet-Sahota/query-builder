@@ -16,7 +16,7 @@ const useCopyToClipBoard = () => {
     }, COPIED_LABEL_TIMEOUT);
     return () => {
       if (timerId) {
-        clearTimeout(setIsCopied);
+        clearTimeout(timerId);
       }
     };
   }, [isCopied]);
